@@ -6,8 +6,8 @@ import java.util.Scanner;
       System.out.print("Enter number: ");
       int num = ck.nextInt();
 
-      for(int i = 0; i <= num; i++){
-        for(int j = 0; j <= i; j++){
+      for(int i = 1; i <= num; i++){
+        for(int j = 1; j <= i; j++){
         System.out.print("*");
         }
       System.out.println("");
