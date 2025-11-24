@@ -7,24 +7,23 @@ import java.util.Scanner;
     public static void main(String []args){
     Scanner ck = new Scanner(System.in);
 
-    System.out.print("1. Asterisk\n2. Ascending\n3. Descending\n4. Combined\n5. Sum of array(Given)\n6. Sum of array(Input)\n7. Arrray Operators");
-    System.out.print("\nEnter your choice: ");
+    System.out.print("1. Asterisk\n2. Ascending\n3. Descending\n4. Combined\n5. Sum of array(Given)\n6. Sum of array(Input)\n7. Arrray Operators\n8. Two Dimensional Array");
+    System.out.print("\n\nEnter your choice: ");
     int choice = ck.nextInt();
       
     switch(choice){
       case 1://asterisk
         //asks for a number
-        System.out.print("Enter a number: ");
+        System.out.print("\nEnter a number: ");
         int num = ck.nextInt();
         //loops for the column
         for(int i = 1; i <= num; i++){
           System.out.print("*");
         }
       break;
-
-
-      case 2://Triangle
-        System.out.print("Enter a number: ");
+      
+      case 2://Triangle (Ascending)
+        System.out.print("\nEnter a number: ");
         int num1 = ck.nextInt();
 
           //loops for the line or rows
@@ -38,10 +37,10 @@ import java.util.Scanner;
       break;
 
 
-      case 3://descending reverse
-        System.out.print("Enter number: ");
+      case 3://Reverse (Descending)
+        System.out.print("\nEnter number: ");
         int num2 = ck.nextInt();
-          //loop for the asterisk inside the line
+          //loops for the rows
           for(int i = num2; i >= 1; i--){
              //loop for the asterisk inside the line
             for(int j = 1; j <= i; j++){
@@ -52,11 +51,11 @@ import java.util.Scanner;
       break;
     
 
-      case 4://combined
-        System.out.print("Enter number: ");
+      case 4://Combined
+        System.out.print("\nEnter number: ");
         int num3 = ck.nextInt();
 
-          //loop for the asterisk inside the line
+          //loops for the row
           for(int i = 1; i <= num3; i++){
             //loop for the asterisk inside the line
             for(int j = 1; j <= i; j++){
@@ -64,7 +63,7 @@ import java.util.Scanner;
            }
             System.out.println("");
           }
-          //loop for the asterisk inside the line
+          //loops for the row
           for(int i = num3; i >= 1; i--){
              //loop for the asterisk inside the line
             for(int j = 1; j <= i; j++){
@@ -81,7 +80,7 @@ import java.util.Scanner;
         
           for(int i = 0; i < 10; i++){
             int sum = array1[i] + array2[i];
-            System.out.print(sum+ ", ");
+            System.out.print("\n" + sum+ ", ");
           }
       break;
         
@@ -94,7 +93,7 @@ import java.util.Scanner;
         int[] sumarray = new int[10];
         int i = 0;
           
-        System.out.println("Enter numbers for the first array");
+        System.out.println("\nEnter numbers for the first array");
         for(i = 0; i <= 9; i++){
           System.out.print("Enter number " + (i + 1) + ": ");
           array3[i] = ck.nextInt();
@@ -105,6 +104,7 @@ import java.util.Scanner;
           System.out.print("Enter number " + (i + 1) + ": ");
           array4[i] = ck.nextInt();
         }
+        
         for(i = 0; i <= 9; i++){
           sumarray[i] = array3[i] + array4[i];
             System.out.print(sumarray[i] + ", ");
@@ -119,33 +119,42 @@ import java.util.Scanner;
         int[] quotarray = new int[10];
         int[] moduloarray = new int[10];
 
+        //variable
         int j = 0;
-          
-        System.out.println("Enter numbers for the first array");
+
+        System.out.println("\nEnter numbers for the first array");
         for(j = 0; j <= 9; j++){
           System.out.print("Enter number " + (j + 1) + ": ");
           array5[j] = ck.nextInt();
         }
-        
+
         System.out.println("Enter numbers for the second array");
         for(j = 0; j <= 9; j++){
           System.out.print("Enter number " + (j + 1) + ": ");
           array6[j] = ck.nextInt();
         }
 
+        //process
          for(j = 0; j <= 9; j++){
           sumarray1[j] = array5[j] + array6[j];
-
           diffarray[j] = array5[j] - array6[j];
-
           quotarray[j] = array5[j] / array6[j];
+          moduloarray[j] = array5[j] % array6[j];
 
-          moduloarray[j] = array5[j] % array6[j]; 
-            System.out.println("Sum = " + sumarray1[j] + " " + "\t" + "Difference = " + diffarray[j] + " " + "\t" + "Quotient = " + quotarray[j] + " " + "\t" + "Modulo Division = " + moduloarray[j] + " ");
+          System.out.println("Sum = " + sumarray1[j] + " " + "\t" + "Difference = " + diffarray[j] + " " + "\t" + "Quotient = " + quotarray[j] + " " + "\t" + "Modulo Division = " + moduloarray[j] + " ");
          }
         break;
 
-
+        case 8://two dimensiona array
+          int[][] twodimarr = {{1,2}, {3,4}, {5,6}, {7,8}, {9,10}};
+          int[][] twodimarr1 = {{10,20}, {30,40}, {50,60}, {70,80}, {90,100}};
+        
+          for(int k = 0; k < twodimarr.length; k++){
+            int sum = twodimarr[k][0] + twodimarr1[k][0];
+            int sum1 = twodimarr[k][1] + twodimarr1[k][1];
+            System.out.println(sum+ " " + sum1);
+          }
+          break;
 
       default:
         System.out.print("Invalid");
