@@ -75,12 +75,14 @@ import java.util.Scanner;
     
       case 5://Sum of array(given)
         //variables
-        int[] array1 = {1,2,3,4,5,6,7,8,9,10};
-        int[] array2 = {10,1,8,3,6,2,4,5,7,8};
-        
+        int[] array1 = {1,3,5,7,9,11,13,15,17,19};
+        int[] array2 = {2,4,6,8,10,12,14,16,18,20};
+       
+        //displays the given template
+        System.out.print("\nThe sum of Array 1 and Array 2 is: \n");
           for(int i = 0; i < 10; i++){
             int sum = array1[i] + array2[i];
-            System.out.print("\n" + sum+ ", ");
+            System.out.println(sum);
           }
       break;
         
@@ -140,9 +142,35 @@ import java.util.Scanner;
           diffarray[j] = array5[j] - array6[j];
           quotarray[j] = array5[j] / array6[j];
           moduloarray[j] = array5[j] % array6[j];
+        }
+        System.out.println();
+        //prints the sum arrays
+        System.out.print("The sum of 2 arrays are: ");
+        for (j = 0; j < 10; j++) {
+            System.out.print(sumarray1[j] + " ");
+        }
+        System.out.println();
 
-          System.out.println("Sum = " + sumarray1[j] + " " + "\t" + "Difference = " + diffarray[j] + " " + "\t" + "Quotient = " + quotarray[j] + " " + "\t" + "Modulo Division = " + moduloarray[j] + " ");
-         }
+        //print the diffarray
+        System.out.print("The difference 2 arrays are: ");
+        for (j = 0; j < 10; j++) {
+            System.out.print(diffarray[j] + " ");
+        }
+        System.out.println();
+
+        //print the quotient array
+        System.out.print("The quotient 2 arrays are: ");
+        for (j = 0; j < 10; j++) {
+            System.out.print(quotarray[j] + " ");
+        }
+        System.out.println();
+
+        //print the modulo array
+        System.out.print("The modulo 2 arrays are: ");
+        for (j = 0; j < 10; j++) {
+            System.out.print(moduloarray[j] + " ");
+        }
+
         break;
 
         case 8://two dimensiona array
