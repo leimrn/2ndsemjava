@@ -3,7 +3,7 @@ import java.util.Scanner;
     public static void main(String[] args){
       Scanner ck = new Scanner(System.in);
      //variables
-      int i = 0, ave = 0, finalsum = 0, sumarray1 = 0, sumarray2 = 0, avearray1 = 0, avearray2 = 0;
+      int i = 0, ave = 0, finalsum = 0, sumarray1 = 0, sumarray2 = 0, sumarray3 = 0, avearray1 = 0, avearray2 = 0;
       //asks for the size of the first array
        System.out.print("Enter the size of your first array: ");
        int size1 = ck.nextInt();
@@ -30,15 +30,19 @@ import java.util.Scanner;
        }
 
        //process for the sums of arrays
+
         for(i = 0; i < finalsize; i++){
+      
           sumarray1 = sumarray1 + array1[i];
-          sumarray2 = sumarray2 + array2[i]; 
+          sumarray2 = sumarray2 + array2[i];
+        
         }
 
         //process for average
         avearray1 = sumarray1 / size1;
         avearray2 = sumarray2 / size2;
         ave = finalsum / finalsize;
+
 
         System.out.println("Average of Array 1: " + avearray1);
         System.out.println("Average of Array 2: " + avearray2);

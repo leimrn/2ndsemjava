@@ -32,6 +32,8 @@ import java.util.Scanner;
          System.out.print("Enter number " + (i + 1) + ": ");
          array2[i] = ck.nextInt();
        }
+       int finalsize;
+       finalsize = (size1 + size2) / 2;
 
        //process
         for(i = 0; i < size1; i++){
@@ -40,6 +42,10 @@ import java.util.Scanner;
           quotarray[i] = array1[i] / array2[i];
           moduloarray[i] = array1[i] % array2[i];
         }
+
+        int maxarray1 = 0, minarray1 = 0, maxsum1 = 0, minsum2 = 0, maxdiff1 = 0, mindiff2 = 0, maxquoto1 = 0, minquoto2 = 0, maxmodulo1 = 0, minmodulo2 = 0;
+        for(i = 0; i < )
+        .
       // Print Header
       System.out.println("\nArray 1\t\tArray 2\t\tSum\t\tDifference\tDivision\tModulo Division");
       // Print Data Row
