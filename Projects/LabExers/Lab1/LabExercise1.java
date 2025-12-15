@@ -20,7 +20,10 @@ import java.util.Scanner;
         for(int i = 1; i <= num; i++){
           System.out.print("*");
         }
+<<<<<<< HEAD
         System.out.println();
+=======
+>>>>>>> 815da7d5dbbc017d7fc08df35f0496d1560843a3
       break;
       
       case 2://Triangle (Ascending)
