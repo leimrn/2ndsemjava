@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int choice; // Declared outside so the loop can check it
+        Scanner ck= new Scanner(System.in);
+        int choice; 
         
         // START LOOP
         do {
@@ -15,10 +15,10 @@ public class Main {
             System.out.println("4 Exit");
             System.out.print("Select an option (1-4): ");
 
-            choice = scanner.nextInt();
+            choice = ck.nextInt();
             
-            // This is needed to fix a Java bug where the loop skips the String input
-            scanner.nextLine(); 
+            
+            ck.nextLine(); 
 
             switch (choice) {
                 
@@ -58,6 +58,6 @@ public class Main {
         // END LOOP (Repeats as long as choice is not 4)
         } while (choice != 4);
         
-        scanner.close();
+        ck.close();
     }
 }
